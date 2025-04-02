@@ -39,8 +39,8 @@ export default function Features() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="section-title text-white">Why Choose Us</h2>
-          <p className="section-subtitle text-white/80">
+          <h2 className="section-title !text-gray-200">Why Choose Us</h2>
+          <p className="section-subtitle !text-gray-400">
             At LuxTravel, we go above and beyond to ensure your travel
             experience exceeds all expectations.
           </p>

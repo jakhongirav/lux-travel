@@ -144,7 +144,7 @@ export default function Offers() {
               <div className="inline-block px-3 py-1 bg-gold/10 text-gold rounded-full text-sm font-medium mb-4">
                 Limited Time Offer
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-3">
+              <h3 className="text-2xl md:text-3xl text-black font-bold mb-3">
                 Bali Luxury Retreat
               </h3>
               <p className="text-gray-600 mb-6">
@@ -191,7 +191,7 @@ export default function Offers() {
         </motion.div>
 
         {/* Pricing Plans */}
-        <h3 className="text-2xl md:text-3xl font-bold text-center mb-12">
+        <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-500 mb-12">
           Our Pricing Plans
         </h3>
 
@@ -202,7 +202,7 @@ export default function Offers() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`bg-white rounded-lg shadow-lg p-6 border ${
+              className={`bg-white rounded-lg shadow-lg p-6 border flex flex-col justify-between ${
                 plan.recommended ? "border-gold relative" : "border-transparent"
               }`}
             >
@@ -211,23 +211,28 @@ export default function Offers() {
                   Most Popular
                 </div>
               )}
-              <h4 className="text-xl font-bold mb-2">{plan.name} Package</h4>
-              <div className="text-3xl font-bold text-navy mb-4">
-                {plan.price}
+              <div>
+                <h4 className="text-xl font-bold text-gray-700 mb-1">
+                  {plan.name} Package
+                </h4>
+                <div className="text-3xl font-bold text-navy mb-3">
+                  {plan.price}
+                </div>
+                <div>
+                  <p className="text-gray-600 mb-2">per person</p>
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, i) => (
+                      <li key={i} className="flex items-start">
+                        <Check
+                          size={18}
+                          className="text-gold mr-2 mt-0.5 flex-shrink-0"
+                        />
+                        <span className="text-gray-600">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-              <p className="text-gray-600 mb-6">per person</p>
-
-              <ul className="space-y-3 mb-8">
-                {plan.features.map((feature, i) => (
-                  <li key={i} className="flex items-start">
-                    <Check
-                      size={18}
-                      className="text-gold mr-2 mt-0.5 flex-shrink-0"
-                    />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
 
               <Link
                 href="#contact"

@@ -1,11 +1,11 @@
 import About from "@/components/about";
-import Contact from "@/components/contact";
+// import Contact from "@/components/contact";
 import Destinations from "@/components/destinations";
 import Features from "@/components/features";
 import Hero from "@/components/hero";
-import Newsletter from "@/components/newsletter";
+// import Newsletter from "@/components/newsletter";
 import Offers from "@/components/offers";
-import Testimonials from "@/components/testimonials";
+// import Testimonials from "@/components/testimonials";
 
 export default function Home() {
   return (
@@ -15,9 +15,9 @@ export default function Home() {
       <Destinations />
       <Offers />
       <Features />
-      <Testimonials />
-      <Contact />
-      <Newsletter />
+      {/* <Testimonials /> */}
+      {/* <Contact /> */}
+      {/* <Newsletter /> */}
     </main>
   );
 }
