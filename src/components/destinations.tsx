@@ -84,7 +84,7 @@ export default function Destinations() {
         >
           <h2 className="section-title">Luxury Destinations</h2>
           <p className="section-subtitle">
-            Discover our handpicked selection of the world's most exclusive
+            Discover our handpicked selection of the world&apos;s most exclusive
             destinations, each offering unique experiences and unparalleled
             luxury.
           </p>

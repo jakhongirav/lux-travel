@@ -41,7 +41,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
-            Curated luxury experiences in the world's most breathtaking
+            Curated luxury experiences in the world&apos;s most breathtaking
             destinations
           </p>
         </motion.div>
