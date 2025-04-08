@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import Logo from "./logo";
+// import Logo from "./logo";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,14 +30,15 @@ export default function Header() {
       }`}
     >
       <div className="container-custom flex justify-between items-center">
-        <Link href="/" className="flex items-center">
-          <span
+        <Link href="/" className="w-16 h-8">
+          <Logo color={isScrolled ? "#000080" : "#FFFFFF"} />
+          {/* <span
             className={`text-2xl font-playfair font-bold ${
               isScrolled ? "text-navy" : "text-white"
             }`}
           >
             LuxTravel
-          </span>
+          </span> */}
         </Link>
 
         {/* Desktop Navigation */}
