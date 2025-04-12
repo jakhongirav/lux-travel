@@ -2,21 +2,39 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import Logo from "./logo";
-// import Logo from "./logo";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "./ui/select";
+import { getTranslations } from "../../locales";
 
-export default function Header() {
+interface HeaderProps {
+  locale: "uz" | "ru" | "en";
+}
+
+export default function Header({ locale }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const translations = getTranslations(locale);
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const changeLocale = (newLocale: string) => {
+    const segments = pathname.split("/");
+    segments[1] = newLocale; // Replace locale
+    router.push(segments.join("/"));
+  };
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -29,24 +47,16 @@ export default function Header() {
         isScrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
       }`}
     >
-      <div className="container-custom flex justify-between items-center">
-        <Link href="/" className="w-16 h-8">
+      <div className="container-custom flex justify-between items-center max-h-24">
+        <Link href={`/${locale}`} className="flex items-center h-full">
           <Logo color={isScrolled ? "#000080" : "#FFFFFF"} />
-          {/* <span
-            className={`text-2xl font-playfair font-bold ${
-              isScrolled ? "text-navy" : "text-white"
-            }`}
-          >
-            LuxTravel
-          </span> */}
         </Link>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8 md:items-center">
-          {["Home", "About", "Destinations", "Offers"].map((item) => (
+          {translations.header.navItems.map((item, idx) => (
             <Link
               key={item}
-              href={`#${item.toLowerCase()}`}
+              href={`#${["home", "about", "destinations", "offers"][idx]}`}
               className={`font-medium transition-colors duration-300 ${
                 isScrolled
                   ? "text-navy hover:text-gold"
@@ -56,17 +66,21 @@ export default function Header() {
               {item}
             </Link>
           ))}
-          <Link
-            href="#contact"
-            className={`btn-primary ${
-              isScrolled ? "bg-gold text-white" : "bg-white text-navy"
-            }`}
-          >
-            Book Now
-          </Link>
         </nav>
 
-        {/* Mobile Menu Button */}
+        <Select onValueChange={changeLocale} defaultValue={locale}>
+          <SelectTrigger className="w-[70px]">
+            <SelectValue placeholder={locale.toUpperCase()} />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              <SelectItem value="uz">Uz</SelectItem>
+              <SelectItem value="ru">Ru</SelectItem>
+              <SelectItem value="en">En</SelectItem>
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+
         <button
           className="md:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -83,21 +97,13 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-md py-4 animate-fade-in">
           <nav className="flex flex-col space-y-4 container-custom">
-            {[
-              "Home",
-              "About",
-              "Destinations",
-              "Offers",
-              "Testimonials",
-              "Contact",
-            ].map((item) => (
+            {translations.header.navItems.map((item, idx) => (
               <Link
                 key={item}
-                href={`#${item.toLowerCase()}`}
+                href={`#${["home", "about", "destinations", "offers"][idx]}`}
                 className="text-navy hover:text-gold font-medium transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -109,7 +115,7 @@ export default function Header() {
               className="btn-primary bg-gold text-white w-full text-center"
               onClick={() => setIsMenuOpen(false)}
             >
-              Book Now
+              {translations.header.bookNow}
             </Link>
           </nav>
         </div>
