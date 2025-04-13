@@ -17,12 +17,13 @@ export const metadata: Metadata = {
     "Experience luxury travel with LuxTravel, your premium travel agency for unforgettable vacations.",
 };
 
-type LayoutProps = {
+export default function RootLayout({
+  children,
+  params,
+}: {
   children: React.ReactNode;
   params: { locale: "uz" | "ru" | "en" };
-};
-
-export default function RootLayout({ children, params }: LayoutProps) {
+}) {
   return (
     <html
       lang={params.locale}
