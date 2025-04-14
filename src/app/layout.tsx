@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="uz" className="scroll-smooth" suppressHydrationWarning>
       <body className={`${inter.variable} ${playfair.variable} font-sans`}>
-        {children}
+        {children};
       </body>
     </html>
   );

@@ -14,9 +14,10 @@ import {
   SelectValue,
 } from "./ui/select";
 import { getTranslations } from "../../locales";
+import { Locale } from "../../types/translations";
 
 interface HeaderProps {
-  locale: string;
+  locale: Locale;
 }
 
 export default function Header({ locale }: HeaderProps) {
