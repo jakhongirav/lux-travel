@@ -16,7 +16,7 @@ import {
 import { getTranslations } from "../../locales";
 
 interface HeaderProps {
-  locale: "uz" | "ru" | "en";
+  locale: string;
 }
 
 export default function Header({ locale }: HeaderProps) {

@@ -1,38 +1,18 @@
-import type React from "react";
-import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
-import "../globals.css";
-import Header from "@/components/header";
 import Footer from "@/components/footer";
+import Header from "@/components/header";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-});
-
-export const metadata: Metadata = {
-  title: "LuxTravel - Premium Travel Agency",
-  description:
-    "Experience luxury travel with LuxTravel, your premium travel agency for unforgettable vacations.",
-};
-
-export default async function RootLayout({
+export default async function LocaleLayout({
   children,
-  params,
+  params: { locale },
 }: {
   children: React.ReactNode;
-  params: { locale: "uz" | "ru" | "en" };
+  params: { locale: string };
 }) {
-  const { locale } = await params;
-
   return (
-    <html lang={locale} className="scroll-smooth" suppressHydrationWarning>
-      <body className={`${inter.variable} ${playfair.variable} font-sans`}>
-        <Header locale={locale} />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <>
+      <Header locale={locale} />
+      {children}
+      <Footer />
+    </>
   );
 }

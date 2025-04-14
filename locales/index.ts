@@ -1,6 +1,6 @@
-import { Translation, Locale } from "../types/translations";
+import { Translation } from "../types/translations";
 
-export const translations: Record<Locale, Translation> = {
+export const translations: Record<string, Translation> = {
   uz: {
     header: {
       navItems: ["Bosh sahifa", "Biz haqimizda", "Yo'nalishlar", "Takliflar"],
@@ -48,6 +48,6 @@ export const translations: Record<Locale, Translation> = {
   },
 };
 
-export const getTranslations = (locale: Locale): Translation => {
+export const getTranslations = (locale: string): Translation => {
   return translations[locale] || translations.uz;
 };
