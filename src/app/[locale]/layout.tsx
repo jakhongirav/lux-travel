@@ -17,21 +17,19 @@ export const metadata: Metadata = {
     "Experience luxury travel with LuxTravel, your premium travel agency for unforgettable vacations.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
   params: { locale: "uz" | "ru" | "en" };
 }) {
+  const { locale } = await params;
+
   return (
-    <html
-      lang={params.locale}
-      className="scroll-smooth"
-      suppressHydrationWarning
-    >
+    <html lang={locale} className="scroll-smooth" suppressHydrationWarning>
       <body className={`${inter.variable} ${playfair.variable} font-sans`}>
-        <Header locale={params.locale} />
+        <Header locale={locale} />
         {children}
         <Footer />
       </body>
