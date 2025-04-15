@@ -53,10 +53,7 @@ export default function About() {
         >
           <h2 className="section-title">About LuxTravel</h2>
           <p className="section-subtitle">
-            For over a decade, LuxTravel has been crafting premium travel
-            experiences for discerning travelers who seek the extraordinary. Our
-            expertise lies in curating bespoke journeys that combine luxury,
-            authenticity, and unforgettable moments.
+            {translations.about.sectionSubtitle}
           </p>
         </motion.div>
 
