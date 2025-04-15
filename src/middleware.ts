@@ -5,6 +5,17 @@ const locales = ["uz", "ru", "en"];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+
+  // Skip static files and Next.js internals
+  if (
+    pathname.startsWith("/_next") ||
+    pathname.startsWith("/api") ||
+    pathname === "/favicon.ico" ||
+    /\.(jpg|jpeg|png|svg|webp|gif|ico|css|js|json)$/.test(pathname)
+  ) {
+    return NextResponse.next();
+  }
+
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
@@ -19,5 +30,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next|api|favicon.ico).*)"],
+  matcher: "/:path*",
 };

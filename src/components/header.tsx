@@ -13,7 +13,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
-import { getTranslations } from "../../locales";
+import { getTranslations } from "../locales";
 import { Locale } from "../../types/translations";
 
 interface HeaderProps {

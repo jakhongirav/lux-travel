@@ -6,13 +6,18 @@ export interface Translation {
   hero: {
     title: string;
     subtitle: string;
-    cta: string;
+    button: string;
   };
   about: {
-    title: string;
-    description: string;
+    sectionTitle: string;
+    sectionSubtitle: string;
+    features: feature[];
   };
-  // Add other sections as needed
+}
+
+interface feature {
+  title: string;
+  description: string;
 }
 
 export type Locale = "uz" | "ru" | "en";

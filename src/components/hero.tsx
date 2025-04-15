@@ -3,9 +3,15 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { getTranslations } from "@/locales";
+import { useLocale } from "@/lib/locale-context";
 
 export default function Hero() {
   const [isLoaded, setIsLoaded] = useState(false);
+  const locale = useLocale();
+  const translations = getTranslations(locale);
+
+  console.log(translations);
 
   useEffect(() => {
     setIsLoaded(true);
@@ -16,7 +22,7 @@ export default function Hero() {
       id="home"
       className="relative h-screen flex items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: "url('/images/hero-bg.jpg')",
+        backgroundImage: "url('/bali-castle.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -30,8 +36,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight">
-            Experience Luxury, <br />
-            Explore the World with LuxTravel
+            {translations.hero.title}
           </h1>
         </motion.div>
 
@@ -41,8 +46,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
-            Curated luxury experiences in the world&apos;s most breathtaking
-            destinations
+            {translations.hero.subtitle}
           </p>
         </motion.div>
 
@@ -55,7 +59,7 @@ export default function Hero() {
             href="#contact"
             className="btn-primary text-lg px-8 py-4 bg-gold text-white hover:shadow-gold/50"
           >
-            Plan Your Dream Trip
+            {translations.hero.button}
           </Link>
         </motion.div>
       </div>

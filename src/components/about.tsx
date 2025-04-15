@@ -4,18 +4,23 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Bed, Plane, MapPin, Shield, Award, Clock } from "lucide-react";
+import { useLocale } from "@/lib/locale-context";
+import { getTranslations } from "@/locales";
 
 export default function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
+  const locale = useLocale();
+  const translations = getTranslations(locale);
+
   const features = [
-    { icon: <Bed size={24} />, title: "VIP Accommodations" },
-    { icon: <Plane size={24} />, title: "First-Class Flights" },
-    { icon: <MapPin size={24} />, title: "Private Tours" },
-    { icon: <Shield size={24} />, title: "Travel Insurance" },
-    { icon: <Award size={24} />, title: "Luxury Experiences" },
-    { icon: <Clock size={24} />, title: "24/7 Concierge" },
+    { icon: <Bed size={24} />, title: translations.about.features[0].title },
+    { icon: <Plane size={24} />, title: translations.about.features[1].title },
+    { icon: <MapPin size={24} />, title: translations.about.features[2].title },
+    { icon: <Shield size={24} />, title: translations.about.features[3].title },
+    { icon: <Award size={24} />, title: translations.about.features[4].title },
+    { icon: <Clock size={24} />, title: translations.about.features[5].title },
   ];
 
   const containerVariants = {
