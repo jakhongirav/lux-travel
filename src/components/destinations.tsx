@@ -6,52 +6,47 @@ import { useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useLocale } from "@/lib/locale-context";
+import { getTranslations } from "@/locales";
 
 export default function Destinations() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const locale = useLocale();
+  const translations = getTranslations(locale);
+
   const destinations = [
     {
-      name: "Santorini, Greece",
+      name: translations.destinations.destinations[0].name,
       image: "/images/santorini.jpg",
-      price: "$2,499",
-      description:
-        "Experience the iconic white-washed buildings and breathtaking sunsets.",
+      description: translations.destinations.destinations[0].description,
     },
     {
-      name: "Maldives",
+      name: translations.destinations.destinations[1].name,
       image: "/images/maldives.jpg",
-      price: "$3,299",
-      description:
-        "Luxury overwater bungalows in crystal clear turquoise waters.",
+      description: translations.destinations.destinations[1].description,
     },
     {
-      name: "Swiss Alps",
+      name: translations.destinations.destinations[2].name,
       image: "/images/swiss-alps.jpg",
-      price: "$2,899",
-      description: "Majestic mountain views and world-class ski resorts.",
+      description: translations.destinations.destinations[2].description,
     },
     {
-      name: "Bali, Indonesia",
+      name: translations.destinations.destinations[3].name,
       image: "/images/bali.jpg",
-      price: "$1,999",
-      description:
-        "Tropical paradise with lush landscapes and vibrant culture.",
+      description: translations.destinations.destinations[3].description,
     },
     {
-      name: "Amalfi Coast, Italy",
+      name: translations.destinations.destinations[4].name,
       image: "/images/amalfi.jpg",
-      price: "$2,799",
-      description:
-        "Stunning coastal views and charming Mediterranean villages.",
+      description: translations.destinations.destinations[4].description,
     },
     {
-      name: "Dubai, UAE",
+      name: translations.destinations.destinations[5].name,
       image: "/images/dubai.jpg",
-      price: "$3,499",
-      description: "Ultra-luxury experiences in the city of superlatives.",
+      description: translations.destinations.destinations[5].description,
     },
   ];
 
@@ -82,18 +77,18 @@ export default function Destinations() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="section-title">Luxury Destinations</h2>
+          <h2 className="section-title">
+            {translations.destinations.sectionTitle}
+          </h2>
           <p className="section-subtitle">
-            Discover our handpicked selection of the world&apos;s most exclusive
-            destinations, each offering unique experiences and unparalleled
-            luxury.
+            {translations.destinations.sectionSubtitle}
           </p>
         </motion.div>
 
         <div className="relative">
           <div className="flex overflow-hidden">
             <div className="flex transition-transform duration-500 ease-in-out">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full p-3">
                 {visibleDestinations.map((destination, index) => (
                   <motion.div
                     key={index}
@@ -114,12 +109,6 @@ export default function Destinations() {
                         <h3 className="text-xl font-bold text-white">
                           {destination.name}
                         </h3>
-                        <div className="flex justify-between items-center mt-2">
-                          <span className="text-gold font-bold">
-                            From {destination.price}
-                          </span>
-                          <span className="text-white text-sm">per person</span>
-                        </div>
                       </div>
                     </div>
                     <div className="p-4">
@@ -130,7 +119,7 @@ export default function Destinations() {
                         href="#contact"
                         className="text-gold font-medium hover:underline"
                       >
-                        Explore Package →
+                        {translations.destinations.explorePackage}
                       </Link>
                     </div>
                   </motion.div>
@@ -158,7 +147,7 @@ export default function Destinations() {
 
         <div className="text-center mt-12">
           <Link href="#contact" className="btn-secondary">
-            View All Packages
+            {translations.destinations.viewAllPackages}
           </Link>
         </div>
       </div>

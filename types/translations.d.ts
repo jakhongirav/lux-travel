@@ -13,10 +13,22 @@ export interface Translation {
     sectionSubtitle: string;
     features: feature[];
   };
+  destinations: {
+    sectionTitle: string;
+    sectionSubtitle: string;
+    viewAllPackages: string;
+    explorePackage: string;
+    destinations: Destination[];
+  };
 }
 
 interface feature {
   title: string;
+  description: string;
+}
+
+interface Destination {
+  name: string;
   description: string;
 }
 

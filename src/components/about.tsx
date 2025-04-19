@@ -51,7 +51,7 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="section-title">About LuxTravel</h2>
+          <h2 className="section-title">{translations.about.sectionTitle}</h2>
           <p className="section-subtitle">
             {translations.about.sectionSubtitle}
           </p>

@@ -47,6 +47,42 @@ export const translations: Record<Locale, Translation> = {
         },
       ],
     },
+    destinations: {
+      sectionTitle: "Hashamatli Manzillar",
+      sectionSubtitle:
+        "Dunyoning eng eksklyuziv manzillarini o'z ichiga olgan tanlangan ro'yxatimizni kashf eting. Har bir manzil noyob tajribalar va benuqson hashamatni taklif etadi.",
+      viewAllPackages: "Barcha Paketlar",
+      explorePackage: "Batafsil →",
+      destinations: [
+        {
+          name: "Santorini, Gretsiya",
+          description: "Oq rangga bo'yalgan uylar va nafis quyosh botishlari.",
+        },
+        {
+          name: "Maldiv orollari",
+          description: "Tiniq ko'k suv ustidagi hashamatli bungalovlar.",
+        },
+        {
+          name: "Shveytsariya Alplari",
+          description:
+            "Dunyoning eng yaxshi chang'i kurortlari va ajoyib tog' manzaralari.",
+        },
+        {
+          name: "Bali, Indoneziya",
+          description:
+            "Yashil landshaftlar va jonli madaniyatga ega tropik jannat.",
+        },
+        {
+          name: "Amalfi sohili, Italiya",
+          description:
+            "O'zgacha dengiz manzaralari va jozibali O'rta er dengizi qishloqlari.",
+        },
+        {
+          name: "Dubay, BAA",
+          description: "Rekordlar shahrida ultra-hashamatli tajribalar.",
+        },
+      ],
+    },
   },
   ru: {
     header: {
@@ -91,6 +127,43 @@ export const translations: Record<Locale, Translation> = {
         {
           title: "Круглосуточный Консьерж",
           description: "Персональный консьерж 24/7 для решения любых вопросов.",
+        },
+      ],
+    },
+    destinations: {
+      sectionTitle: "Роскошные Направления",
+      sectionSubtitle:
+        "Откройте для себя наш тщательно отобранный список самых эксклюзивных направлений мира, каждое из которых предлагает уникальные впечатления и непревзойденную роскошь.",
+      viewAllPackages: "Все Пакеты",
+      explorePackage: "Подробнее →",
+      destinations: [
+        {
+          name: "Санторини, Греция",
+          description: "Знаменитые белоснежные дома и захватывающие закаты.",
+        },
+        {
+          name: "Мальдивы",
+          description:
+            "Роскошные бунгало над кристально чистой бирюзовой водой.",
+        },
+        {
+          name: "Швейцарские Альпы",
+          description:
+            "Величественные горные пейзажи и лучшие горнолыжные курорты.",
+        },
+        {
+          name: "Бали, Индонезия",
+          description:
+            "Тропический рай с пышными ландшафтами и яркой культурой.",
+        },
+        {
+          name: "Амальфитанское побережье, Италия",
+          description:
+            "Потрясающие виды на побережье и очаровательные средиземноморские деревушки.",
+        },
+        {
+          name: "Дубай, ОАЭ",
+          description: "Ультра-роскошные впечатления в городе рекордов.",
         },
       ],
     },
@@ -140,6 +213,43 @@ export const translations: Record<Locale, Translation> = {
           title: "24/7 Concierge",
           description:
             "Experience the finest 24/7 concierge tailored to your preferences.",
+        },
+      ],
+    },
+    destinations: {
+      sectionTitle: "Luxury Destinations",
+      sectionSubtitle:
+        "Discover our handpicked selection of the world's most exclusive destinations, each offering unique experiences and unparalleled luxury.",
+      viewAllPackages: "View All Packages",
+      explorePackage: "Explore Package →",
+      destinations: [
+        {
+          name: "Santorini, Greece",
+          description:
+            "Experience the iconic white-washed buildings and breathtaking sunsets.",
+        },
+        {
+          name: "Maldives",
+          description:
+            "Luxury overwater bungalows in crystal clear turquoise waters.",
+        },
+        {
+          name: "Swiss Alps",
+          description: "Majestic mountain views and world-class ski resorts.",
+        },
+        {
+          name: "Bali, Indonesia",
+          description:
+            "Tropical paradise with lush landscapes and vibrant culture.",
+        },
+        {
+          name: "Amalfi Coast, Italy",
+          description:
+            "Stunning coastal views and charming Mediterranean villages.",
+        },
+        {
+          name: "Dubai, UAE",
+          description: "Ultra-luxury experiences in the city of superlatives.",
         },
       ],
     },
