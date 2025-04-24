@@ -11,8 +11,6 @@ export default function Hero() {
   const locale = useLocale();
   const translations = getTranslations(locale);
 
-  console.log(translations);
-
   useEffect(() => {
     setIsLoaded(true);
   }, []);

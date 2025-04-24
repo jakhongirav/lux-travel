@@ -20,33 +20,38 @@ export default function Destinations() {
   const destinations = [
     {
       name: translations.destinations.destinations[0].name,
-      image: "/images/santorini.jpg",
+      image: "/santorini.jpg",
       description: translations.destinations.destinations[0].description,
     },
     {
       name: translations.destinations.destinations[1].name,
-      image: "/images/maldives.jpg",
+      image: "/maldives.jpg",
       description: translations.destinations.destinations[1].description,
     },
     {
       name: translations.destinations.destinations[2].name,
-      image: "/images/swiss-alps.jpg",
+      image: "/swiss.jpg",
       description: translations.destinations.destinations[2].description,
     },
     {
       name: translations.destinations.destinations[3].name,
-      image: "/images/bali.jpg",
+      image: "/bali.jpg",
       description: translations.destinations.destinations[3].description,
     },
     {
       name: translations.destinations.destinations[4].name,
-      image: "/images/amalfi.jpg",
+      image: "/rome.jpg",
       description: translations.destinations.destinations[4].description,
     },
     {
       name: translations.destinations.destinations[5].name,
-      image: "/images/dubai.jpg",
+      image: "/dubai.jpg",
       description: translations.destinations.destinations[5].description,
+    },
+    {
+      name: translations.destinations.destinations[6].name,
+      image: "/malaysiya.jpg",
+      description: translations.destinations.destinations[6].description,
     },
   ];
 
@@ -105,13 +110,12 @@ export default function Destinations() {
                         className="object-cover"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-navy/70 to-transparent"></div>
-                      <div className="absolute bottom-4 left-4 right-4">
-                        <h3 className="text-xl font-bold text-white">
-                          {destination.name}
-                        </h3>
-                      </div>
+                      {/* <div className="absolute bottom-1 left-4 right-4"></div> */}
                     </div>
                     <div className="p-4">
+                      <h3 className="text-xl font-bold text-black">
+                        {destination.name}
+                      </h3>
                       <p className="text-gray-600 mb-4">
                         {destination.description}
                       </p>

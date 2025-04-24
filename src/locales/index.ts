@@ -73,13 +73,18 @@ export const translations: Record<Locale, Translation> = {
             "Yashil landshaftlar va jonli madaniyatga ega tropik jannat.",
         },
         {
-          name: "Amalfi sohili, Italiya",
+          name: "Rim, Italiya",
           description:
             "O'zgacha dengiz manzaralari va jozibali O'rta er dengizi qishloqlari.",
         },
         {
           name: "Dubay, BAA",
           description: "Rekordlar shahrida ultra-hashamatli tajribalar.",
+        },
+        {
+          name: "Malayziya",
+          description:
+            "Zamonaviy osmono'par binalar qadimgi tropik o'rmonlar bilan hashamatli uyg'unlikda uchrashadigan joy.",
         },
       ],
     },
@@ -157,13 +162,18 @@ export const translations: Record<Locale, Translation> = {
             "Тропический рай с пышными ландшафтами и яркой культурой.",
         },
         {
-          name: "Амальфитанское побережье, Италия",
+          name: "Рим, Италия",
           description:
             "Потрясающие виды на побережье и очаровательные средиземноморские деревушки.",
         },
         {
           name: "Дубай, ОАЭ",
           description: "Ультра-роскошные впечатления в городе рекордов.",
+        },
+        {
+          name: "Малайзия",
+          description:
+            "Где современные небоскребы встречаются с древними тропическими лесами в идеальной роскошной гармонии.",
         },
       ],
     },
@@ -243,13 +253,22 @@ export const translations: Record<Locale, Translation> = {
             "Tropical paradise with lush landscapes and vibrant culture.",
         },
         {
-          name: "Amalfi Coast, Italy",
+          name: "Rome, Italy",
           description:
             "Stunning coastal views and charming Mediterranean villages.",
         },
         {
           name: "Dubai, UAE",
           description: "Ultra-luxury experiences in the city of superlatives.",
+        },
+        {
+          name: "Dubai, UAE",
+          description: "Ultra-luxury experiences in the city of superlatives.",
+        },
+        {
+          name: "Malaysia",
+          description:
+            "Where modern skyscrapers meet ancient rainforests in perfect luxury harmony.",
         },
       ],
     },
