@@ -20,6 +20,18 @@ export interface Translation {
     explorePackage: string;
     destinations: Destination[];
   };
+  footer: {
+    company: string;
+    aboutUs: string;
+    contactUs: string;
+    payment: string;
+    description: string;
+    contact: string;
+    allRightsReserved: string;
+  };
+  payment: {
+    body: string;
+  };
 }
 
 interface feature {

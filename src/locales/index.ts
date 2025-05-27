@@ -88,6 +88,19 @@ export const translations: Record<Locale, Translation> = {
         },
       ],
     },
+    footer: {
+      company: "Kompaniya",
+      aboutUs: "Biz haqimizda",
+      contactUs: "Bog'lanish",
+      payment: "To'lov",
+      description:
+        "LuxTravel - bu hashamatli ta'tillar va noyob sayohat tajribalarini qidirayotgan sayohatchilar uchun maxsus hashamatli sayohat agentligi.",
+      contact: "Biz bilan bog'laning",
+      allRightsReserved: "Barcha huquqlar himoyalangan.",
+    },
+    payment: {
+      body: "To‘lash uchun skanerlаng",
+    },
   },
   ru: {
     header: {
@@ -176,6 +189,19 @@ export const translations: Record<Locale, Translation> = {
             "Где современные небоскребы встречаются с древними тропическими лесами в идеальной роскошной гармонии.",
         },
       ],
+    },
+    footer: {
+      company: "Компания",
+      aboutUs: "О нас",
+      contactUs: "Контакты",
+      payment: "Оплата",
+      description:
+        "LuxTravel - это агентство по бронированию роскошных путешествий и эксклюзивных опытов для путешественников, которые ищут нечто особенное.",
+      contact: "Свяжитесь с нами",
+      allRightsReserved: "Все права защищены.",
+    },
+    payment: {
+      body: "Для оплаты сканируйте QR-код",
     },
   },
   en: {
@@ -271,6 +297,19 @@ export const translations: Record<Locale, Translation> = {
             "Where modern skyscrapers meet ancient rainforests in perfect luxury harmony.",
         },
       ],
+    },
+    footer: {
+      company: "Company",
+      aboutUs: "About Us",
+      contactUs: "Contact Us",
+      payment: "Payment",
+      description:
+        "LuxTravel is a premium travel agency specializing in bespoke luxury vacations and experiences for discerning travelers seeking the extraordinary.",
+      contact: "Contact Us",
+      allRightsReserved: "All rights reserved.",
+    },
+    payment: {
+      body: "For payment, scan the QR code",
     },
   },
 };

@@ -5,6 +5,7 @@ import Features from "@/components/features";
 import Hero from "@/components/hero";
 // import Newsletter from "@/components/newsletter";
 import Offers from "@/components/offers";
+import Payment from "@/components/payment";
 // import Testimonials from "@/components/testimonials";
 
 export default function Home() {
@@ -13,7 +14,8 @@ export default function Home() {
       <Hero />
       <About />
       <Destinations />
-      <Offers />
+      <Payment />
+      {/* <Offers /> */}
       <Features />
       {/* <Testimonials /> */}
       {/* <Contact /> */}
