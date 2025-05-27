@@ -33,9 +33,13 @@ export interface Translation {
     body: string;
   };
   features: {
+    body: {
+      title: string;
+      description: string;
+    }[];
     title: string;
     description: string;
-  }[];
+  };
 }
 
 interface feature {

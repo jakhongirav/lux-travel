@@ -101,23 +101,28 @@ export const translations: Record<Locale, Translation> = {
     payment: {
       body: "To‘lash uchun skanerlаng",
     },
-    features: [
-      {
-        title: "VIP xizmat",
-        description:
-          "24/7 sizning har bir istagingizni bajarishga tayyor bo‘lgan maxsus konsyerj jamoamiz bilan mukammal xizmatdan bahramand bo‘ling.",
-      },
-      {
-        title: "Shaxsiy marshrutlar",
-        description:
-          "Har bir sayohat sizning xohish, qiziqish va sayohat uslubingizga mos ravishda alohida tarzda yaratiladi.",
-      },
-      {
-        title: "Tanlab olingan hashamatli mehmonxonalar",
-        description:
-          "Dunyoning eng eksklyuziv mehmonxonalarida, eng yaxshi xizmat, qulaylik va joylashuvga ega maskanlarda yashang.",
-      },
-    ],
+    features: {
+      body: [
+        {
+          title: "VIP xizmat",
+          description:
+            "24/7 sizning har bir istagingizni bajarishga tayyor bo‘lgan maxsus konsyerj jamoamiz bilan mukammal xizmatdan bahramand bo‘ling.",
+        },
+        {
+          title: "Shaxsiy marshrutlar",
+          description:
+            "Har bir sayohat sizning xohish, qiziqish va sayohat uslubingizga mos ravishda alohida tarzda yaratiladi.",
+        },
+        {
+          title: "Tanlab olingan hashamatli mehmonxonalar",
+          description:
+            "Dunyoning eng eksklyuziv mehmonxonalarida, eng yaxshi xizmat, qulaylik va joylashuvga ega maskanlarda yashang.",
+        },
+      ],
+      title: "Nega bizni tanlashadi",
+      description:
+        "LuxTravel’da biz sizning sayohatingizdagi barcha kutganlaringizdan oshib ketishga intilamiz. Bizning jamoamiz sizning barcha istaklaringizni 24/7 bajarishga tayyor.",
+    },
   },
   ru: {
     header: {
@@ -220,23 +225,28 @@ export const translations: Record<Locale, Translation> = {
     payment: {
       body: "Для оплаты сканируйте QR-код",
     },
-    features: [
-      {
-        title: "VIP-сервис",
-        description:
-          "Испытайте непревзойденное внимание к деталям с нашей командой консьержей, доступной 24/7 для выполнения любого вашего запроса.",
-      },
-      {
-        title: "Индивидуальные маршруты",
-        description:
-          "Каждое путешествие создается индивидуально, учитывая ваши предпочтения, интересы и стиль путешествий для по-настоящему уникального опыта.",
-      },
-      {
-        title: "Отобранные роскошные отели",
-        description:
-          "Останавливайтесь в самых эксклюзивных отелях мира, тщательно отобранных за их исключительный сервис, удобства и расположение.",
-      },
-    ],
+    features: {
+      body: [
+        {
+          title: "VIP-сервис",
+          description:
+            "Испытайте непревзойденное внимание к деталям с нашей командой консьержей, доступной 24/7 для выполнения любого вашего запроса.",
+        },
+        {
+          title: "Индивидуальные маршруты",
+          description:
+            "Каждое путешествие создается индивидуально, учитывая ваши предпочтения, интересы и стиль путешествий для по-настоящему уникального опыта.",
+        },
+        {
+          title: "Отобранные роскошные отели",
+          description:
+            "Останавливайтесь в самых эксклюзивных отелях мира, тщательно отобранных за их исключительный сервис, удобства и расположение.",
+        },
+      ],
+      title: "Почему выбирают нас",
+      description:
+        "В LuxTravel мы стремимся превзойти все ожидания вашего путешествия. Наша команда готова удовлетворить все ваши пожелания 24/7.",
+    },
   },
   en: {
     header: {
@@ -345,23 +355,28 @@ export const translations: Record<Locale, Translation> = {
     payment: {
       body: "For payment, scan the QR code",
     },
-    features: [
-      {
-        title: "VIP Service",
-        description:
-          "Experience unparalleled attention to detail with our dedicated concierge team available 24/7 to fulfill your every request.",
-      },
-      {
-        title: "Personalized Itineraries",
-        description:
-          "Every journey is uniquely crafted to match your preferences, interests, and travel style for a truly bespoke experience.",
-      },
-      {
-        title: "Handpicked Luxury Hotels",
-        description:
-          "Stay in the world's most exclusive properties, carefully selected for their exceptional service, amenities, and locations.",
-      },
-    ],
+    features: {
+      body: [
+        {
+          title: "VIP Service",
+          description:
+            "Experience unparalleled attention to detail with our dedicated concierge team available 24/7 to fulfill your every request.",
+        },
+        {
+          title: "Personalized Itineraries",
+          description:
+            "Every journey is uniquely crafted to match your preferences, interests, and travel style for a truly bespoke experience.",
+        },
+        {
+          title: "Handpicked Luxury Hotels",
+          description:
+            "Stay in the world's most exclusive properties, carefully selected for their exceptional service, amenities, and locations.",
+        },
+      ],
+      title: "Why Choose Us",
+      description:
+        "At LuxTravel, we go above and beyond to ensure your travel experience exceeds all expectations. Our dedicated team is ready to fulfill all your requests 24/7.",
+    },
   },
 };
 

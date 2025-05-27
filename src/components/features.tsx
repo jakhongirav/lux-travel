@@ -16,18 +16,18 @@ export default function Features() {
   const features = [
     {
       icon: <Star className="w-10 h-10 text-gold" />,
-      title: translations.features[0].title,
-      description: translations.features[0].description,
+      title: translations.features.body[0].title,
+      description: translations.features.body[0].description,
     },
     {
       icon: <Plane className="w-10 h-10 text-gold" />,
-      title: translations.features[1].title,
-      description: translations.features[1].description,
+      title: translations.features.body[1].title,
+      description: translations.features.body[1].description,
     },
     {
       icon: <Hotel className="w-10 h-10 text-gold" />,
-      title: translations.features[2].title,
-      description: translations.features[2].description,
+      title: translations.features.body[2].title,
+      description: translations.features.body[2].description,
     },
   ];
 
@@ -40,10 +40,11 @@ export default function Features() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="section-title !text-gray-200">Why Choose Us</h2>
+          <h2 className="section-title !text-gray-200">
+            {translations.features.title}
+          </h2>
           <p className="section-subtitle !text-gray-400">
-            At LuxTravel, we go above and beyond to ensure your travel
-            experience exceeds all expectations.
+            {translations.features.description}
           </p>
         </motion.div>
 
