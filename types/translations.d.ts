@@ -32,6 +32,10 @@ export interface Translation {
   payment: {
     body: string;
   };
+  features: {
+    title: string;
+    description: string;
+  }[];
 }
 
 interface feature {

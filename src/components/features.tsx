@@ -4,29 +4,30 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { Star, Plane, Hotel } from "lucide-react";
+import { getTranslations } from "@/locales";
+import { useLocale } from "@/lib/locale-context";
 
 export default function Features() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const locale = useLocale();
+  const translations = getTranslations(locale);
 
   const features = [
     {
       icon: <Star className="w-10 h-10 text-gold" />,
-      title: "VIP Service",
-      description:
-        "Experience unparalleled attention to detail with our dedicated concierge team available 24/7 to fulfill your every request.",
+      title: translations.features[0].title,
+      description: translations.features[0].description,
     },
     {
       icon: <Plane className="w-10 h-10 text-gold" />,
-      title: "Personalized Itineraries",
-      description:
-        "Every journey is uniquely crafted to match your preferences, interests, and travel style for a truly bespoke experience.",
+      title: translations.features[1].title,
+      description: translations.features[1].description,
     },
     {
       icon: <Hotel className="w-10 h-10 text-gold" />,
-      title: "Handpicked Luxury Hotels",
-      description:
-        "Stay in the world's most exclusive properties, carefully selected for their exceptional service, amenities, and locations.",
+      title: translations.features[2].title,
+      description: translations.features[2].description,
     },
   ];
 
