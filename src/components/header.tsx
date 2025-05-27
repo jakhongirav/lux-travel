@@ -57,7 +57,7 @@ export default function Header({ locale }: HeaderProps) {
           {translations.header.navItems.map((item, idx) => (
             <Link
               key={item}
-              href={`#${["home", "about", "destinations", "offers"][idx]}`}
+              href={`#${["home", "about", "destinations"][idx]}`}
               className={`font-medium transition-colors duration-300 ${
                 isScrolled
                   ? "text-navy hover:text-gold"
@@ -104,7 +104,7 @@ export default function Header({ locale }: HeaderProps) {
             {translations.header.navItems.map((item, idx) => (
               <Link
                 key={item}
-                href={`#${["home", "about", "destinations", "offers"][idx]}`}
+                href={`#${["home", "about", "destinations"][idx]}`}
                 className="text-navy hover:text-gold font-medium transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >

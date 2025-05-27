@@ -3,7 +3,7 @@ import { Locale, Translation } from "../../types/translations";
 export const translations: Record<Locale, Translation> = {
   uz: {
     header: {
-      navItems: ["Bosh sahifa", "Biz haqimizda", "Yo'nalishlar", "Takliflar"],
+      navItems: ["Bosh sahifa", "Biz haqimizda", "Yo'nalishlar"],
       bookNow: "Buyurtma berish",
     },
     hero: {
@@ -126,7 +126,7 @@ export const translations: Record<Locale, Translation> = {
   },
   ru: {
     header: {
-      navItems: ["Главная", "О нас", "Направления", "Предложения"],
+      navItems: ["Главная", "О нас", "Направления"],
       bookNow: "Забронировать",
     },
     hero: {
@@ -250,7 +250,7 @@ export const translations: Record<Locale, Translation> = {
   },
   en: {
     header: {
-      navItems: ["Home", "About", "Destinations", "Offers"],
+      navItems: ["Home", "About", "Destinations"],
       bookNow: "Book Now",
     },
     hero: {
