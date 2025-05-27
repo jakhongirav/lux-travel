@@ -4,7 +4,7 @@ import Destinations from "@/components/destinations";
 import Features from "@/components/features";
 import Hero from "@/components/hero";
 // import Newsletter from "@/components/newsletter";
-import Offers from "@/components/offers";
+// import Offers from "@/components/offers";
 import Payment from "@/components/payment";
 // import Testimonials from "@/components/testimonials";
 

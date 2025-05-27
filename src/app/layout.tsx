@@ -22,6 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="uz" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+      </head>
       <body className={`${inter.variable} ${playfair.variable} font-sans`}>
         {children};
       </body>
