@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Instagram, Phone, Mail, MapPin } from "lucide-react";
+import { Instagram, Phone, Mail } from "lucide-react";
 import { getTranslations } from "../locales";
 import { useLocale } from "@/lib/locale-context";
 
