@@ -97,6 +97,7 @@ export const translations: Record<Locale, Translation> = {
         "LuxTravel - bu hashamatli ta'tillar va noyob sayohat tajribalarini qidirayotgan sayohatchilar uchun maxsus hashamatli sayohat agentligi.",
       contact: "Biz bilan bog'laning",
       allRightsReserved: "Barcha huquqlar himoyalangan.",
+      adress: "Mirzo Ulug'bek, C-1 Buyuk Ipak Yuli 45b",
     },
     payment: {
       body: "To‘lash uchun skanerlаng",
@@ -221,6 +222,7 @@ export const translations: Record<Locale, Translation> = {
         "LuxTravel - это агентство по бронированию роскошных путешествий и эксклюзивных опытов для путешественников, которые ищут нечто особенное.",
       contact: "Свяжитесь с нами",
       allRightsReserved: "Все права защищены.",
+      adress: "Мирзо Улугбек, C-1 Буюк Ипак Йули 45б",
     },
     payment: {
       body: "Для оплаты сканируйте QR-код",
@@ -351,6 +353,7 @@ export const translations: Record<Locale, Translation> = {
         "LuxTravel is a premium travel agency specializing in bespoke luxury vacations and experiences for discerning travelers seeking the extraordinary.",
       contact: "Contact Us",
       allRightsReserved: "All rights reserved.",
+      adress: "Mirzo Ulug'bek, C-1 Buyuk Ipak Yuli 45b",
     },
     payment: {
       body: "For payment, scan the QR code",

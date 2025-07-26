@@ -28,6 +28,7 @@ export interface Translation {
     description: string;
     contact: string;
     allRightsReserved: string;
+    adress: string;
   };
   payment: {
     body: string;

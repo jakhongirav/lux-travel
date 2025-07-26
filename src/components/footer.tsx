@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Instagram, Phone, Mail } from "lucide-react";
+import { Instagram, Phone, Mail, MapPin } from "lucide-react";
 import { getTranslations } from "../locales";
 import { useLocale } from "@/lib/locale-context";
 
@@ -37,11 +37,11 @@ export default function Footer() {
       text: "luxtraveluzb1@gmail.com",
       href: "mailto:luxtraveluzb1@gmail.com",
     },
-    // {
-    //   icon: <MapPin className="w-5 h-5" />,
-    //   text: "Olmazor, Nurafshon ko'chasi, Sariqsuv 4 (Mo'ljal: Sag'bon Nurafshon chorrahasi)",
-    //   href: "https://maps.google.com",
-    // },
+    {
+      icon: <MapPin className="w-5 h-5" />,
+      text: translations.footer.adress,
+      href: "https://www.google.com/maps/place/41%C2%B018'36.7%22N+69%C2%B017'25.2%22E/@41.3098683,69.2896259,17.39z/data=!4m4!3m3!8m2!3d41.3101944!4d69.2903333?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D",
+    },
   ];
 
   const socialLinks = [
